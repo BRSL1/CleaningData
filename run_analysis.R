@@ -1,44 +1,8 @@
-library(dplyr)
-setwd("UCI_HAR_Dataset")
-
-test_data = read.table("test/X_test.txt")
-
-train_data = read.table("train/X_train.txt")
-
-
-
-
-
-test_data_row_names = read.table("test/Y_test.txt")
-train_data_row_names = read.table("train/Y_train.txt")
-
-test_data2 = mutate(test_data, ACTIVITY=as.character(test_data_row_names$V1))
-train_data2 = mutate(train_data, ACTIVITY=as.character(train_data_row_names$V1))
-
-train_test_data = rbind(train_data2,test_data2)
-
-
-features = read.table("features.txt")
-features = gsub("-","",features$V2)
-features = gsub("\\(","",features)
-features = gsub("\\)","",features)
-features = gsub(",","_",features)
-features=c(features,"ACTIVITY")
-
-names(train_test_data)=features
-
-
-unique_col_names = unique(names(train_test_data))
-train_test_data2=train_test_data[,unique_col_names]
-mean_std_data=select(train_test_data2,contains("mean"),contains("std"))
-
-----------------------------------------------------------------------------------------
  library(plyr)
  library(dplyr)
- setwd("D:/CoursEra2014/Data Science/Course03 Getting and Cleaning Data/Week5 Course Project/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset")
+ setwd("UCI_HAR_Dataset")
 
  test_data = read.table("test/X_test.txt")
-
  train_data = read.table("train/X_train.txt")
 
  features = read.table("features.txt")
@@ -81,9 +45,5 @@ mean_std_data=select(train_test_data2,contains("mean"),contains("std"))
 
 
 
- final_means = ddply(grouped_data,.(Subject,Activity),colwise(mean,is.numeric))     # applies "mean" function on numeric columns only
-                                                                                    # final means is a table of 180x88 size
-
-
-
-
+ final_means = ddply(grouped_data,.(Subject,Activity),colwise(mean,is.numeric))    
+ 
