@@ -17,12 +17,9 @@ train_data = read.table("train/X_train.txt")
 
 ~~~	
 	
-	
-	
-Tables can look like this:
+The folder **UCI_HAR_Dataset** contains the data
 
-	size  material      color
-	----  ------------  ------------
-	9     leather       brown
-	10    hemp canvas   natural
-	11    glass         transparent	
+X files contain 561 variables. 
+Both test and train data have been loaded.
+
+
