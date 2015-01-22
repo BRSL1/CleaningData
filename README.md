@@ -1,5 +1,3 @@
-## This is a markdown file
-
 Getting and Cleaning Data Solution
 ==================================
 
