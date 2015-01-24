@@ -86,3 +86,6 @@ One of the most exciting areas in all of data science right now is wearable comp
  train_test_data <- rbind(train_data_with_Subject_Activity, test_data_with_Subject_Activity)
  final_means     <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))  
 ~~~
+![1st 6 Final Averages](/images/final_head.png "1st 6 Final Averages")
+
+![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
