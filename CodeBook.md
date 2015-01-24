@@ -6,6 +6,12 @@ Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploa
 
 ##### Data Dictionary - My Tidy Data
 
+My final data set contains...
+ TWO Character Variables and
+ 86  Numeric Variables called Features
+ 180 Rows
+
+List if Variables
 
 	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
