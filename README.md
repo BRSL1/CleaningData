@@ -28,4 +28,14 @@ The folder **UCI_HAR_Dataset** contains the data
 X files contain 561 variables. 
 Both test and train data have been loaded.
 
+at the end of step 2 you have a data frame with 10299 observations and about 70 columns
+
+At the end of step 5 you have a new data frame with 180 observations and about 70 columns. 
+
+The new frame contains the mean value of each variable averaged across all cases of the same subject and activity - hence 180 observations = 30 subjects x 6 activities.
+
+
+![example image](images/result1.png "An exemplary image")
+
+
 
