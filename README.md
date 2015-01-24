@@ -35,7 +35,7 @@ At the end of step 5 you have a new data frame with 180 observations and about 7
 The new frame contains the mean value of each variable averaged across all cases of the same subject and activity - hence 180 observations = 30 subjects x 6 activities.
 
 
-	![example image](/images/result1.jpg "An exemplary image")
+	![example image](CleaningData/images/result1.jpg "An exemplary image")
 
 	![example image](/images/result1.jpeg "An exemplary image")
 
