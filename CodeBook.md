@@ -38,11 +38,36 @@ My final data set contains...
 
 #####New Columns that I have added
 * Activity IDs from **Y_test.txt** and **Y_train.txt** files are converted to their Descriptions
-* **Subject** and **Activity** columns separately for **test and train** data 
+~~~R
+ activity_labels <- read.table("activity_labels.txt",as.is=TRUE) #Not to read character values as Factors
+ activity_labels <- activity_labels$V2
+
+ #generating Subject and ActivityNames columns for test data
+ subject_test <- read.table("test/subject_test.txt")
+ Y_test <- read.table("test/Y_test.txt")
+ Y_test_subj_act <- mutate(Y_test,Subject=as.character(subject_test$V1), Activity=factor(V1,labels=activity_labels))
+
+ #generating Subject and ActivityNames columns for train data
+ subject_train <- read.table("train/subject_train.txt")
+ Y_train <- read.table("train/Y_train.txt")
+ Y_train_subj_act <- mutate(Y_train,Subject=as.character(subject_train$V1), Activity=factor(V1,labels=activity_labels))
+~~~
+* added **Subject** and **Activity** columns separately for **test and train** data 
 * for adding new columns I have used the function **mutate()** of **dplyr** package
+~~~R
+ #combining Subject and ActivityNames columns with Readings columns of test data
+ test_data_with_Subject_Activity <- mutate(final_test_data, Subject=Y_test_subj_act$Subject, Activity=as.character(Y_test_subj_act$Activity))
+ 
+ #combining Subject and ActivityNames columns with Readings columns of train data
+ train_data_with_Subject_Activity <- mutate(final_train_data, Subject=Y_train_subj_act$Subject, Activity=as.character(Y_train_subj_act$Activity))
+~~~
 
 ###Merging test and train data and finding Final Averages
 * using **rbind()** function, I combined **test data** (2947 rows) and **train data** (7352) rows into a single data set (**10299 rows**)
+~~~R
+ # combining test and train data
+ train_test_data <- rbind(train_data_with_Subject_Activity, test_data_with_Subject_Activity)   #10299 records
+~~~
 * ![Last 6 Final records](/images/before_average.png "Last 6 Final records")
 
 * using the function **ddply()** from the package **plyr**, I grouped data on **Subject and Activity** columns and calculated **mean** of all **numerical** columns
