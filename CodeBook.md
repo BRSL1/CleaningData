@@ -6,14 +6,13 @@ Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploa
 
 ##### Data Dictionary - My Tidy Data
 
-	-----------	----	-----------		------------	-------------------------------------------------
+	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
-	-----------	----	-----------		------------	-------------------------------------------------
-	Subject		2		Subject ID		1,2,3,4...30	IDs of a group of 30 volunteers within 
-														an age bracket of 19-48 years who performed 
-														**SIX activities** of daily living (ADL) while
-														carrying a waist-mounted smartphone with embedded 
-														inertial sensors.
+	-----------	----	-----------		------------	---------------------------------------------------------
+	Subject		2		Subject ID		1,2,3,4...30	IDs of a group of 30 volunteers within an age bracket of 
+														19-48 years who performed **SIX activities** of daily 
+														living (ADL) while carrying a waist-mounted smartphone 
+														with embedded inertial sensors.
 	
 	Activity	1		Activity ID		1				WALKING
 										2				WALKING_UPSTAIRS
