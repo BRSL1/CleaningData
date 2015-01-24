@@ -9,7 +9,7 @@ Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploa
 My final data set contains:
 
 * TWO Character Variables and
-* 86  Numeric Variables ( Features )
+* 86  Numeric Variables called Features
 * 180 Rows
 
 	-----------	----	-----------		------------	---------------------------------------------------------
