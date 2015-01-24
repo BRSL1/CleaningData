@@ -1,6 +1,6 @@
 Code Book
 =========
-describes the variables, the data, and any transformations or work that you performed to clean up the data
+This Code Book describes the variables, the data, and the transformations and work that I performed to clean up the data as part of the **Courseera**'s project **Getting and Cleaning Data** 
 
 ##### Data Dictionary - My Tidy Data
 
