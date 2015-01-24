@@ -29,7 +29,7 @@
  names(train_data) <- features          
 ~~~
 
-##### extracting only those columns which contain **mean** and **std** words in them
+###### extracting only those columns which contain **mean** and **std** words in them
 * out of 561 columns there are **84 repeated** columns
 * so unique columns are **477**. out of them only **86 columns** contain words **mean** and **std** 
 * out of 86 columns, 
@@ -43,7 +43,7 @@
  final_train_data <- train_data[,mean_std_unique_col_names];
 ~~~
 
-##### attaching Subject and Activity columns for test and train data 
+###### attaching Subject and Activity columns for test and train data 
 ~~~R
  activity_labels <- read.table("activity_labels.txt",as.is=TRUE)
  activity_labels <- activity_labels$V2
@@ -65,7 +65,7 @@
  train_data_with_Subject_Activity <- mutate(final_train_data, Subject=Y_train_subj_act$Subject, Activity = as.character(Y_train_subj_act$Activity))
 ~~~
 
-#### Final Steps
+##### Final Steps
 * combining test and train data ( total 10299 records )
 * calculating average of all 86 numeric columns by **grouping on Subject and Activity** 
 * total aggregated records are **180**
