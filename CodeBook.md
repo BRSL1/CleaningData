@@ -23,8 +23,18 @@ My final data set contains...
  features <- gsub(",","_",features) 
 ~~~
 * replaced default data column names "V1", "V2", "V3" etc., with Features Descriptions
+~~~R
+ names(test_data)  <- features
+ names(train_data) <- features 
+~~~
 * later, extracted only data columns containing words **mean** and **std** from both **test** and **train** data
 * finally, I got only **86 Features** containing words **mean** and **std** out of total **561**
+~~~R
+ unique_col_names  <- unique(features)           #only 477 unique columns names  ( 84 columns to be avoided)
+ 
+ #only 86 columns contain words mean and std
+ mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
+~~~
 
 #####New Columns that I have added
 * Activity IDs from **Y_test.txt** and **Y_train.txt** files are converted to their Descriptions
