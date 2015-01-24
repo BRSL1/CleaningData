@@ -23,49 +23,53 @@
 ~~~R
  features <- read.table("features.txt")          
  features <- gsub("-|\\(|\\)","",features$V2)     
- features <- gsub(",","_",features)              
+ features <- gsub(",","_",features)
+ 
  names(test_data)  <- features
  names(train_data) <- features          
 ~~~
 
-##### extracting only those columns which contain **mean** and *std* words in them
+##### extracting only those columns which contain **mean** and **std** words in them
 * out of 561 columns there are **84 repeated** columns
 * so unique columns are **477**. out of them only **86 columns** contain words **mean** and **std** 
 * out of 86 columns, 
 	1. 66 columns are accelerometer and gyroscope axial acceleration variables ( unit is gravity ) 
 	2. 20 columns are their angular acceleration variables ( unit is radians/sec )
 ~~~R 
- unique_col_names  <- unique(features)  
+ unique_col_names          <- unique(features)  
  mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
-~~~
- 
-~~~R
- #final data to be averaged
+
  final_test_data  <- test_data[,mean_std_unique_col_names];
  final_train_data <- train_data[,mean_std_unique_col_names];
- 
- activity_labels <- read.table("activity_labels.txt",as.is=TRUE) #Not to read character values as Factors
+~~~
+
+##### attaching Subject and Activity columns for test and train data 
+~~~R
+ activity_labels <- read.table("activity_labels.txt",as.is=TRUE)
  activity_labels <- activity_labels$V2
 
- #generating Subject and ActivityNames columns for test data
+ # generating Subject and ActivityNames columns for test data
  subject_test <- read.table("test/subject_test.txt")
  Y_test <- read.table("test/Y_test.txt")
- Y_test_subj_act <- mutate(Y_test,Subject=as.character(subject_test$V1), Activity=factor(V1,labels=activity_labels))
+ Y_test_subj_act <- mutate(Y_test,Subject=as.character(subject_test$V1), Activity = factor(V1, labels = activity_labels))
 
- #generating Subject and ActivityNames columns for train data
+ # generating Subject and ActivityNames columns for train data
  subject_train <- read.table("train/subject_train.txt")
  Y_train <- read.table("train/Y_train.txt")
- Y_train_subj_act <- mutate(Y_train,Subject=as.character(subject_train$V1), Activity=factor(V1,labels=activity_labels))
+ Y_train_subj_act <- mutate(Y_train,Subject=as.character(subject_train$V1), Activity = factor(V1, labels = activity_labels))
 
- #combining Subject and ActivityNames columns with Readings columns of test data
- test_data_with_Subject_Activity <- mutate(final_test_data, Subject=Y_test_subj_act$Subject, Activity=as.character(Y_test_subj_act$Activity))
+ # combining Subject and ActivityNames columns with Readings columns of test data
+ test_data_with_Subject_Activity <- mutate(final_test_data, Subject=Y_test_subj_act$Subject, Activity = as.character(Y_test_subj_act$Activity))
  
- #combining Subject and ActivityNames columns with Readings columns of train data
- train_data_with_Subject_Activity <- mutate(final_train_data, Subject=Y_train_subj_act$Subject, Activity=as.character(Y_train_subj_act$Activity))
+ # combining Subject and ActivityNames columns with Readings columns of train data
+ train_data_with_Subject_Activity <- mutate(final_train_data, Subject=Y_train_subj_act$Subject, Activity = as.character(Y_train_subj_act$Activity))
+~~~
 
- #combining test and train data
- train_test_data <- rbind(train_data_with_Subject_Activity, test_data_with_Subject_Activity)   #10299 records
- 
- #calculating average of all 86 numeric columns by grouping on Subject and Activity
- final_means <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))            #180 rows  88 cols  
+#### Final Steps
+* combining test and train data ( total 10299 records )
+* calculating average of all 86 numeric columns by **grouping on Subject and Activity** 
+* total aggregated records are **180**
+~~~R
+ train_test_data <- rbind(train_data_with_Subject_Activity, test_data_with_Subject_Activity)
+ final_means     <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))  
 ~~~
