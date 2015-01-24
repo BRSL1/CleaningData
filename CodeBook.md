@@ -17,24 +17,24 @@ My final data set contains...
 #####Transformations that I have done
 * extracted Descriptions of features from **features.txt** file
 * converted Descriptions into a single word by removing special symbols like **-  (  )  ,**
-* ~~~R
+~~~R
   features <- read.table("features.txt")          # 561 features ( descriptions of columns )
   features <- gsub("-|\\(|\\)","",features$V2)    # replacing - ( ) with space and comma with underscore
   features <- gsub(",","_",features) 
-  ~~~
+~~~
 * replaced default data column names "V1", "V2", "V3" etc., with Features Descriptions
-* ~~~R
+~~~R
   names(test_data)  <- features
   names(train_data) <- features 
-  ~~~
+~~~
 * later, extracted only data columns containing words **mean** and **std** from both **test** and **train** data
 * finally, I got only **86 Features** containing words **mean** and **std** out of total **561**
-* ~~~R
+~~~R
   unique_col_names  <- unique(features)           # only 477 unique columns names out of 561
  
   # only 86 columns contain words mean and std
   mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
-  ~~~
+~~~
 
 #####New Columns that I have added
 * Activity IDs from **Y_test.txt** and **Y_train.txt** files are converted to their Descriptions
