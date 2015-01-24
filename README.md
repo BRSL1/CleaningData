@@ -1,14 +1,14 @@
 ![tidy](/images/tidy_time.png)
 ## R language Code behind Tidying the data
 
-##### importing required packages and setting the default directory
+####### importing required packages and setting the default directory
 ~~~R
  library(plyr)
  library(dplyr)
  setwd("UCI_HAR_Dataset")                 
 ~~~
 
-##### loading experimental readings into R data frames
+###### loading experimental readings into R data frames
 * each row of both test data and train data contains values of **561 variables**(Columns)
 * initially column names are **V1** **V2** **V3** ... **V561**
 ~~~R
@@ -27,7 +27,9 @@
  
  #only 86 columns contain words mean and std
  mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
+ ~~~
  
+ ~~~R
  #final data to be averaged
  final_test_data  <- test_data[,mean_std_unique_col_names];
  final_train_data <- train_data[,mean_std_unique_col_names];
