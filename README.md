@@ -1,7 +1,7 @@
 ![tidy](/images/tidy_time.png)
 ## R language Code behind Tidying the data
 
-####### importing required packages and setting the default directory
+###### importing required packages and setting the default directory
 ~~~R
  library(plyr)
  library(dplyr)
@@ -12,24 +12,34 @@
 * each row of both test data and train data contains values of **561 variables**(Columns)
 * initially column names are **V1** **V2** **V3** ... **V561**
 ~~~R
- test_data  <- read.table("test/X_test.txt")     #561 columns with default names V1, V2...V561
- train_data <- read.table("train/X_train.txt")   #561 columns
+ test_data  <- read.table("test/X_test.txt")    
+ train_data <- read.table("train/X_train.txt")
 ~~~
 
-##### tidying the names of features
+###### tidying the names of features
+* total features are **561**
+* replacing - ( ) with space and comma with underscore
+* replacing test and train data columns names V1, V2... with Feature's descriptions
 ~~~R
- features <- read.table("features.txt")          #561 features ( descriptions of columns )
- features <- gsub("-|\\(|\\)","",features$V2)    # replacing - ( ) with space and comma with underscore
- features <- gsub(",","_",features)              #561 features as Character vector
+ features <- read.table("features.txt")          
+ features <- gsub("-|\\(|\\)","",features$V2)     
+ features <- gsub(",","_",features)              
  names(test_data)  <- features
- names(train_data) <- features                   #default column names V1, V2... are changed to Features names
- unique_col_names  <- unique(features)           #only 477 unique columns names  ( 84 columns to be avoided)
- 
- #only 86 columns contain words mean and std
+ names(train_data) <- features          
+~~~
+
+##### extracting only those columns which contain **mean** and *std* words in them
+* out of 561 columns there are **84 repeated** columns
+* so unique columns are **477**. out of them only **86 columns** contain words **mean** and **std** 
+* out of 86 columns, 
+	1. 66 columns are accelerometer and gyroscope axial acceleration variables ( unit is gravity ) 
+	2. 20 columns are their angular acceleration variables ( unit is radians/sec )
+~~~R 
+ unique_col_names  <- unique(features)  
  mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
- ~~~
+~~~
  
- ~~~R
+~~~R
  #final data to be averaged
  final_test_data  <- test_data[,mean_std_unique_col_names];
  final_train_data <- train_data[,mean_std_unique_col_names];
