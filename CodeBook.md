@@ -17,7 +17,7 @@ My final data set contains...
 #####Transformations that I have done
 * extracted Descriptions of features from **features.txt** file
 * converted Descriptions into a single word by removing special symbols like **-  (  )  ,**
-* ~~~R
+~~~R
  features <- read.table("features.txt")          # 561 features ( descriptions of columns )
  features <- gsub("-|\\(|\\)","",features$V2)    # replacing - ( ) with space and comma with underscore
  features <- gsub(",","_",features) 
