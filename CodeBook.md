@@ -9,9 +9,9 @@ describes the variables, the data, and any transformations or work that you perf
 	-----------	----
 	Subject		2
 			Subject ID
-	###### Values
+######	Values
 		1,2,3,4...30
-	---------------------
+	-----------	----
 
 	----	------------	------------
 	size	material		color
