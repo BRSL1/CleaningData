@@ -4,19 +4,8 @@ describes the variables, the data, and any transformations or work that you perf
 
 ##### Data Dictionary - My Tidy Data
 
-	-----------	----
-	Variable	size
-	-----------	----
-	Subject		2
-			Subject ID
-######	Values
-		1,2,3,4...30
-	-----------	----
-
-	----	------------	------------
-	size	material		color
-	----	------------	------------
-	9     leather       brown
-	10    hemp canvas   natural
-	11    glass         transparent
-	----	------------	------------
+	-----------	----	-----------		--------	--------------------------------------
+	Variable	size	Description		Values		Value Explanation
+	-----------	----	-----------		--------	--------------------------------------
+	Subject		2		Subject ID		1,2,3,4...30
+	-----------	----	-----------		--------	--------------------------------------
