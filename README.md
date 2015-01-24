@@ -16,7 +16,7 @@ library(dplyr)
 >
 > at the last step of the analysis
 
-	~~~R
+~~~R
 setwd("UCI_HAR_Dataset")
 
 test_data = read.table("test/X_test.txt")
@@ -38,7 +38,7 @@ The new frame contains the mean value of each variable averaged across all cases
 
 This is an [example link](http://example.com/).
 
-	![example image](CleaningData/images/result1.jpg "An exemplary image")
+	![example image](/images/result1.jpg "An exemplary image")
 
 	![example image](https://github.com/HANAGA/CleaningData/blob/master/images/result1.jpg "An exemplary image")
 
