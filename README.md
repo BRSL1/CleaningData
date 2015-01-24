@@ -40,7 +40,7 @@ This is an [example link](http://example.com/).
 
 	![example image](CleaningData/images/result1.jpg "An exemplary image")
 
-	![example image](tree/master/images/result1.jpeg "An exemplary image")
+	![example image](https://github.com/HANAGA/CleaningData/blob/master/images/result1.jpg "An exemplary image")
 
 
 
