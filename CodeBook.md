@@ -36,7 +36,7 @@ My final data set contains...
  final_means <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))   #180 rows  88 cols  
 ~~~
 
-#####Data Dictionary  My Tidy Data
+#####Data Dictionary - My Tidy Data
 
 	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
@@ -53,18 +53,18 @@ My final data set contains...
 										5				STANDING
 										6				LAYING
 	
-	tBodyAccmeanX
-	tBodyAccmeanY
-	tBodyAccmeanZ
-	tBodyAccstdX
-	tBodyAccstdY
-	tBodyAccstdZ
-	tGravityAccmeanX
-	tGravityAccmeanY
-	tGravityAccmeanZ
-	tGravityAccstdX
-	tGravityAccstdY
-	tGravityAccstdZ
+	tBodyAccmeanX				:		 
+	tBodyAccmeanY				: 
+	tBodyAccmeanZ				: 
+	tBodyAccstdX				: 
+	tBodyAccstdY				: 
+	tBodyAccstdZ				: 
+	tGravityAccmeanX	    these are		 values are 
+	tGravityAccmeanY	   all Numeric		in the range
+	tGravityAccmeanZ	    variables		   [-1,1]
+	tGravityAccstdX				: 
+	tGravityAccstdY				: 
+	tGravityAccstdZ				: 
 	tBodyAccJerkmeanX
 	tBodyAccJerkmeanY
 	tBodyAccJerkmeanZ
