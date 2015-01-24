@@ -1,12 +1,18 @@
 ![tidy](/images/tidy_time.png)
 ## R language Code behind Tidying the data
 
-#### Overview
+#### Wearable Computing
+One of the most exciting areas in all of data science right now is wearable computing
+![PhoneMotion](/images/phone_motion.png)
+
+#### Code Overview
 * extracting test and train data having columns containing **mean** and **std** words
 * attaching appropriate Activity names to Activity Ids
 * adding Subject and Activity columns to Features columns
 * combining test and train data sets
 * creating a final Tidy data set with the average of each Feacture for each Subject and Activity
+
+#### Code Explanation
 
 ###### importing required packages and setting the default directory
 ~~~R
