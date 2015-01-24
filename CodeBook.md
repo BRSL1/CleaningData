@@ -14,5 +14,5 @@ describes the variables, the data, and any transformations or work that you perf
 										3			RUNNING
 										4			WALKING ON STAIRS
 										5			WALKING ON ROAD
-										6			WALKING DOWN
+										6			WALKING DOWN1
 	-----------	----	-----------		--------	--------------------------------------
