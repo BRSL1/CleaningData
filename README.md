@@ -1,14 +1,14 @@
 ![tidy](/images/tidy_time.png)
 ## R language Code behind Tidying the data
 
-### importing required packages and setting the default directory
+##### importing required packages and setting the default directory
 ~~~R
  library(plyr)
  library(dplyr)
  setwd("UCI_HAR_Dataset")                 
 ~~~
 
-### loading experimental readings into R data frames
+##### loading experimental readings into R data frames
 * each row of both test data and train data contains values of **561 variables**(Columns)
 * initially column names are **V1** **V2** **V3** ... **V561**
 ~~~R
@@ -16,7 +16,7 @@
  train_data <- read.table("train/X_train.txt")   #561 columns
 ~~~
 
-### tidying the names of features
+##### tidying the names of features
 ~~~R
  features <- read.table("features.txt")          #561 features ( descriptions of columns )
  features <- gsub("-|\\(|\\)","",features$V2)    # replacing - ( ) with space and comma with underscore
