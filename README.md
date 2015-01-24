@@ -1,6 +1,13 @@
 ![tidy](/images/tidy_time.png)
 ## R language Code behind Tidying the data
 
+#### Overview
+* extracting test and train data having columns containing **mean* and **std** words
+* attaching appropriate Activity names to Activity Ids
+* adding Subject and Activity columns to Features columns
+* combining test and train data sets
+* creating a final Tidy data set with the average of each Feacture for each Subject and Activity
+
 ###### importing required packages and setting the default directory
 ~~~R
  library(plyr)
@@ -65,7 +72,7 @@
  train_data_with_Subject_Activity <- mutate(final_train_data, Subject=Y_train_subj_act$Subject, Activity = as.character(Y_train_subj_act$Activity))
 ~~~
 
-##### Final Steps
+#### Final Steps
 * combining test and train data ( total 10299 records )
 * calculating average of all 86 numeric columns by **grouping on Subject and Activity** 
 * total aggregated records are **180**
