@@ -2,7 +2,7 @@
 ## R language Code behind Tidying the data
 
 #### Overview
-* extracting test and train data having columns containing **mean* and **std** words
+* extracting test and train data having columns containing **mean** and **std** words
 * attaching appropriate Activity names to Activity Ids
 * adding Subject and Activity columns to Features columns
 * combining test and train data sets
