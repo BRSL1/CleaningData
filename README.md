@@ -36,8 +36,6 @@ The new frame contains the mean value of each variable averaged across all cases
 
 
 
-This is an [example link](http://example.com/).
-
 	![example image](/images/result1.jpg "An exemplary image")
 
 	![example image](https://github.com/HANAGA/CleaningData/blob/master/images/result1.jpg "An exemplary image")
