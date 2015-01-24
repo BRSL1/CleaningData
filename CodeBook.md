@@ -4,14 +4,14 @@ describes the variables, the data, and any transformations or work that you perf
 
 ##### Data Dictionary - My Tidy Data
 
------------	----
-Variable	size
------------	----
-Subject		2
-		Subject ID
-###### Values
-	1,2,3,4...30
-------------------------------
+	-----------	----
+	Variable	size
+	-----------	----
+	Subject		2
+			Subject ID
+	###### Values
+		1,2,3,4...30
+	---------------------
 
 	----	------------	------------
 	size	material		color
