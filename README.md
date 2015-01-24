@@ -1,3 +1,4 @@
+!(/images/tidy-time.png)
 ## R language Code behind Tidying the data
 
 ### importing required packages and setting the default directory
