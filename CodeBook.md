@@ -14,12 +14,21 @@ My final data set contains...
 ![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
 
 
-#####Transformations that I done
+#####Transformations that I have done
 * extracted Descriptions of features from **features.txt** file
 * converted Descriptions into a single word by removing special symbols like **-  (  )  ,**
 * replaced default data column names "V1", "V2", "V3" etc., with Features Descriptions
 * later, extracted only data columns containing words **mean** and **std** from both **test** and **train** data
 * finally, I got only **86 Features** containing words **mean** and **std** out of total **561**
+
+#####New Columns that I have added
+* Activity IDs from **Y_test.txt** and **Y_train.txt** files are converted to their Descriptions
+* **Subject** and **Activity** columns separately for **test and train** data 
+* for adding new columns I have used the function **mutate()** of **dplyr** package
+
+#####Merging test and train data
+* using **rbind()** function, I combined **test data** (2947 rows) and **train data** (7352) rows into a single data set (**10299 rows**)
+* ![Last 6 Final records](/images/before_average.png "Last 6 Final records")
 
 #####Data Dictionary  My Tidy Data
 
