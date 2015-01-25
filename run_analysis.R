@@ -10,7 +10,7 @@
  features <- gsub(",","_",features)              #561 features as Character vector
  names(test_data)  <- features
  names(train_data) <- features                   #default column names V1, V2... are changed to Features names
- unique_col_names  <- unique(features)           #only 477 unique columns names  ( 84 columns to be avoided)
+ unique_col_names  <- unique(features)           #only 477 unique columns names
  
  #only 86 columns contain words mean and std
  mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
@@ -19,7 +19,7 @@
  final_test_data  <- test_data[,mean_std_unique_col_names];
  final_train_data <- train_data[,mean_std_unique_col_names];
  
- activity_labels <- read.table("activity_labels.txt",as.is=TRUE)
+ activity_labels <- read.table("activity_labels.txt",as.is=TRUE) #Not to read character values as Factors
  activity_labels <- activity_labels$V2
 
  #generating Subject and ActivityNames columns for test data
