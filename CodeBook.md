@@ -15,10 +15,11 @@ My final data set contains...
 
 
 #####Transformations that I done
-	* extracted Descriptions of features from **features.txt** file
-	* converted Descriptions into a single word by removing special symbols like **-  (  )  ,**
-	* replaced default data column names "V1", "V2", "V3" etc., with Features Descriptions
-	* later, extracted only data columns containing words **mean** and **std**  from both **test** and **train** data
+* extracted Descriptions of features from **features.txt** file
+* converted Descriptions into a single word by removing special symbols like **-  (  )  ,**
+* replaced default data column names "V1", "V2", "V3" etc., with Features Descriptions
+* later, extracted only data columns containing words **mean** and **std** 
+	from both **test** and **train** data
 
 
 #####Data Dictionary  My Tidy Data
