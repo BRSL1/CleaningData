@@ -15,7 +15,7 @@ My final data set contains...
 
 Please find my Variable's descriptions [^1]
 
-[^1]: #####									Data Dictionary - My Tidy Data
+	[^1]: #####									Data Dictionary - My Tidy Data
 
 	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
