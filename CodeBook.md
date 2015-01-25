@@ -9,7 +9,7 @@ My final data set contains...
 * 86  Numeric Variables called Features
 * 180 Rows
 
-	Here's a footnote [^1].
+	Here's a footnote	[^1].
 
 	[^1]: Footnote text goes here.
 
