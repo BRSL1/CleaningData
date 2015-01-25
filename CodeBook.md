@@ -13,12 +13,7 @@ My final data set contains...
 
 ![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
 
-Please find my Variable's descriptions [^1].
-
-dfdsf
-sdfds
-dsfdsf
-dsfdsf
+Please find my Variable's descriptions [^1]
 
 [^1]: #####									Data Dictionary - My Tidy Data
 
