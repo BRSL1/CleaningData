@@ -1,17 +1,18 @@
  library(plyr)
  library(dplyr)
- setwd("UCI_HAR_Dataset")                 # setwd("C:/Users/Administrator/CleaningData/UCI_HAR_Dataset")
+ setwd("UCI_HAR_Dataset")                 
 
- test_data = read.table("test/X_test.txt")          #561 columns with default names V1, V2...V561
- train_data = read.table("train/X_train.txt")       #561 columns
+ test_data = read.table("test/X_test.txt")      #561 columns with default names V1, V2...V561
+ train_data = read.table("train/X_train.txt")   #561 columns
 
- features = read.table("features.txt")              #561 features ( descriptions of columns )
- features = gsub("-|\\(|\\)","",features$V2)        # replacing - ( ) with space and comma with underscore
- features = gsub(",","_",features)                  #561 features as Character vector
+ features = read.table("features.txt")          #561 features ( descriptions of columns )
+ features = gsub("-|\\(|\\)","",features$V2)    # replacing - ( ) with space and comma with underscore
+ features = gsub(",","_",features)              #561 features as Character vector
  names(test_data)=features
- names(train_data)=features                         #default column names V1, V2... are changed to Features names
- unique_col_names = unique(features)   #only 477 unique columns names  ( 84 columns to be avoided)
-#only 86 columns contain words mean and std
+ names(train_data)=features                     #default column names V1, V2... are changed to Features names
+ unique_col_names = unique(features)            #only 477 unique columns names  ( 84 columns to be avoided)
+ 
+ #only 86 columns contain words mean and std
  mean_std_unique_col_names = unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
  
  #final data to be averaged
