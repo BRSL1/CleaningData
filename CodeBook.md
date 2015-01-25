@@ -26,9 +26,15 @@ My final data set contains...
 * **Subject** and **Activity** columns separately for **test and train** data 
 * for adding new columns I have used the function **mutate()** of **dplyr** package
 
-#####Merging test and train data
+###Merging test and train data and finding Final Averages
 * using **rbind()** function, I combined **test data** (2947 rows) and **train data** (7352) rows into a single data set (**10299 rows**)
 * ![Last 6 Final records](/images/before_average.png "Last 6 Final records")
+
+* using the function **ddply()** from the package **plyr**, I grouped data on **Subject and Activity** columns and calculated **mean** of all **numerical** columns
+~~~R
+#calculating average of all 86 numeric columns by grouping on Subject and Activity
+ final_means <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))            #180 rows  88 cols  
+~~~
 
 #####Data Dictionary  My Tidy Data
 
