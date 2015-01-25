@@ -32,7 +32,7 @@ My final data set contains...
 
 * using the function **ddply()** from the package **plyr**, I grouped data on **Subject and Activity** columns and calculated **mean** of all **numerical** columns
 ~~~R
-#calculating average of all 86 numeric columns by grouping on Subject and Activity
+ #calculating average of all 86 numeric columns by grouping on Subject and Activity
  final_means <- ddply(train_test_data,.(Subject,Activity),colwise(mean,is.numeric))   #180 rows  88 cols  
 ~~~
 
