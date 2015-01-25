@@ -2,7 +2,7 @@ Code Book
 =========
 This Code Book describes the variables, the data, and the transformations and work that I performed to clean up the data as part of the [**Coursera**](http://www.coursera.org)'s project **Getting and Cleaning Data** 
 
-Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploads/user-19e115787c80679a2336524b/973497/asst-3/2d1eb1c0a20511e4ac048fbcdaa06f3b.txt) that contains required averages
+Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploads/user-19e115787c80679a2336524b/973497/asst-3/3bd9f440a3c211e4901c7175d6058a45.txt) that contains required averages
 
 My final data set contains...
 * TWO Character Variables and
