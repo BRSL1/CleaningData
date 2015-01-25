@@ -9,13 +9,9 @@ My final data set contains...
 * 86  Numeric Variables called Features
 * 180 Rows
 
-[goto](#Data-Dictionary--My-Tidy-Data)
-
 ![1st 6 Final Averages](/images/final_head.png "1st 6 Final Averages")
 
 ![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
-
-Please find my Variable's descriptions [^2]
 
 #####Data Dictionary  My Tidy Data#####
 
