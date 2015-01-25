@@ -2,8 +2,9 @@
 ## R language Code behind Tidying the data
 
 #### Wearable Computing
-One of the most exciting areas in all of data science right now is wearable computing
+One of the most exciting areas in all of data science right now is wearable computing. 
 ![PhoneMotion](/images/phone_motion.png)
+The data for this project is collected from **Human Activity Recognition database** built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors. The purpose of this project is to **clean a data set** that is collected from the HAR database.
 
 #### Code Overview
 * extracting test and train data having columns containing **mean** and **std** words
