@@ -1,9 +1,10 @@
 Code Book
 =========
-This Code Book describes the variables, the data, and the transformations and work that I performed to clean up the data as part of the [**Coursera**](http://www.coursera.org)'s project **Getting and Cleaning Data** 
+This Code Book describes the variables, the data, and the transformations and work that I performed to clean up the data as part of the [**Coursera**](http://www.coursera.org)'s project **Getting and Cleaning Data**. 
 
-Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploads/user-19e115787c80679a2336524b/973497/asst-3/3bd9f440a3c211e4901c7175d6058a45.txt) that contains required averages
+Here's the link to [my final data set](https://s3.amazonaws.com/coursera-uploads/user-19e115787c80679a2336524b/973497/asst-3/3bd9f440a3c211e4901c7175d6058a45.txt) that contains required averages.
 
+### 180 x 88
 My final data set contains...
 * 2 Character Variables and
 * 86  Numeric Variables called -Features-
