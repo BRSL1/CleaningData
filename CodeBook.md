@@ -4,8 +4,6 @@ This Code Book describes the variables, the data, and the transformations and wo
 
 Here's a the link to [my final data set](https://s3.amazonaws.com/coursera-uploads/user-19e115787c80679a2336524b/973497/asst-3/2d1eb1c0a20511e4ac048fbcdaa06f3b.txt) that contains required averages
 
-##### Data Dictionary - My Tidy Data
-
 My final data set contains...
 * TWO Character Variables and
 * 86  Numeric Variables called Features
@@ -15,7 +13,7 @@ My final data set contains...
 
 ![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
 
-List if Variables
+#####									Data Dictionary - My Tidy Data
 
 	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
