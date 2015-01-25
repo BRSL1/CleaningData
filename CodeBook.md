@@ -9,13 +9,17 @@ My final data set contains...
 * 86  Numeric Variables called Features
 * 180 Rows
 
+Here's a footnote [^1].
+
+[^1]: Footnote text goes here.
+
 ![1st 6 Final Averages](/images/final_head.png "1st 6 Final Averages")
 
 ![Last 6 Final Averages](/images/final_tail.png "Last 6 Final Averages")
 
-Please find my Variable's descriptions [^1]
+Please find my Variable's descriptions [^2]
 
-	[^1]: #####									Data Dictionary - My Tidy Data
+[^2]: #####									Data Dictionary - My Tidy Data
 
 	-----------	----	-----------		------------	---------------------------------------------------------
 	Variable	size	Description		Values			Value Explanation
