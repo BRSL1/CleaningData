@@ -42,12 +42,10 @@ One of the most exciting areas in all of data science right now is wearable comp
  names(train_data) <- features          
 ~~~
 
+## 86/561
 ###### extracting only those columns which contain **mean** and **std** words in them
 * out of 561 columns there are **84 repeated** columns
 * so unique columns are **477**. out of them only **86 columns** contain words **mean** and **std** 
-* out of 86 columns, 
-	1. 66 columns are accelerometer and gyroscope axial acceleration variables ( unit is gravity ) 
-	2. 20 columns are their angular acceleration variables ( unit is radians/sec )
 ~~~R 
  unique_col_names          <- unique(features)  
  mean_std_unique_col_names <- unique_col_names[grepl("(mean|std)",unique_col_names,ignore.case=TRUE)]
